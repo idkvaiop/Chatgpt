@@ -1,7 +1,3 @@
-
-#-----------CREDITS -----------
-# telegram : @itz_legend_coder
-# github : noob-mukesh
 from pyrogram import Client, filters,enums,idle
 from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvalid
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
@@ -30,13 +26,12 @@ Mukesh = Client(
     bot_token = BOT_TOKEN
 )
 START = f"""
-๏ ʜᴇʏ, ɪ ᴀᴍ {BOT_NAME}
-➻ ᴀɴ ᴏᴘᴇɴ-ᴀɪ-ʙᴀsᴇᴅ ᴄʜᴀᴛɢᴘᴛ.
-──────────────────
-➻ ᴜsᴀɢᴇ:\n\n `/chatgpt` : Ask AnyThing.
-    example: `/chatgpt Where is TajMahal?`
+This is ChatGPT AI Telegram Bot!
+I can help you with your doubts as much as possible, give me try ❤️
 
-๏ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴜsᴇ /help
+Use /ask {your question} 
+
+
 """
 xa = bytearray.fromhex("68 74 74 70 73 3A 2F 2F 67 69 74 68 75 62 2E 63 6F 6D 2F 4E 6F 6F 62 2D 6D 75 6B 65 73 68 2F 43 68 61 74 67 70 74 2D 62 6F 74").decode()
 axx = bytearray.fromhex("49  54 7A 5F 4C 45 47 45 4E 44 5F 43 4F 44 45 52").decode()
