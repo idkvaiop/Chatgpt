@@ -65,7 +65,7 @@ SOURCE_BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('Source', url=f"{SO
 HELP_READ = "Do it by /ChatGPT {question} or /ask {question}"
 HELP_BACK = [
      [
-           InlineKeyboardButton(text="Question That ChatGPT can solve  ", url=f"https://t.me/{UPDATE_CHNL}/528"),
+           InlineKeyboardButton(text="Question That ChatGPT can solve  ", url=f"https://t.me/ChatGPT_TG4/66"),
            
      ],
     [
