@@ -40,10 +40,7 @@ SOURCE = xa
 UPDATE_CHNL = xxc
 DEVELOPER = axx
 SOURCE_TEXT = f"""
-๏ ʜᴇʏ, ɪ ᴀᴍ [{BOT_NAME}]
-➻ ᴀɴ ᴏᴘᴇɴ-ᴀɪ-ʙᴀsᴇᴅ ᴄʜᴀᴛɢᴘᴛ.
-──────────────────
-ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ
+Hello, This is [{BOT_NAME}. My source code is private but if you are interested to buy, contact @ArsanikContactBot!
 """
 
 
@@ -51,53 +48,28 @@ x=["❤️","🎉","✨","🪸","🎉","🎈","🎯"]
 g=choice(x)
 MAIN = [
     [
-        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/{DEVELOPER}"),
-        InlineKeyboardButton(text=" ꜱᴜᴘᴘᴏʀᴛ ", url=f"https://t.me/{SUPPORT_GRP}"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴍᴅs ", callback_data="HELP"),
-    ],
-    [
-        InlineKeyboardButton(text="sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url=f"{SOURCE}"),
-        InlineKeyboardButton(text=" ᴜᴘᴅᴀᴛᴇs ", url=f"https://t.me/{UPDATE_CHNL}"),
-    ],
-]
-X = [
-    [
-        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/{DEVELOPER}"),
-        
-        InlineKeyboardButton(text=" ꜱᴜᴘᴘᴏʀᴛ ", url=f"https://t.me/{SUPPORT_GRP}"),
-    ]
+        InlineKeyboardButton(text="Updates", url=f"https://t.me/ChatGPT_TG4"),
+        InlineKeyboardButton(text="Support ", url=f"https://t.me/ChatGPT_TG4"),
     ]
     
+    
 PNG_BTN = [
-    [
-         InlineKeyboardButton(
-             text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
-             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-         ),
-     ],
+   
      [
-         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", 
-                              url=f"https://t.me/{SUPPORT_GRP}",
+         InlineKeyboardButton(text="Update", 
+                              url=f"https://t.me/ChatGPT_TG4",
          ),
      ],
 ]
-SOURCE_BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('sᴏᴜʀᴄᴇ', url=f"{SOURCE}")]])
-HELP_READ = "➻ ᴜsᴇ /chatgpt write a simple flask app in python.  \n\n **➻ ᴜsᴇ /ping ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ᴘɪɴɢ ᴏғ ᴛʜᴇ ʙᴏᴛ.**\n\n©️ @mr_sukkun**"
+SOURCE_BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('Source', url=f"{SOURCE}")]])
+HELP_READ = "Do it by /ChatGPT {question} or /ask {question}"
 HELP_BACK = [
      [
-           InlineKeyboardButton(text="Qᴜᴇꜱᴛɪᴏɴ ᴛʜᴀᴛ ᴄʜᴀᴛɢᴘᴛ ᴄᴀɴ ꜱᴏʟᴠᴇ ", url=f"https://t.me/{UPDATE_CHNL}/528"),
+           InlineKeyboardButton(text="Question That ChatGPT can solve  ", url=f"https://t.me/{UPDATE_CHNL}/528"),
            
      ],
     [
-           InlineKeyboardButton(text="ʙᴀᴄᴋ ", callback_data="HELP_BACK"),
+           InlineKeyboardButton(text="Back ", callback_data="HELP_BACK"),
     ],
 ]
 
@@ -108,12 +80,10 @@ async def restart(client, m: Message):
         accha = await m.reply_text(
                         text = f"{g}")
         await asyncio.sleep(0.2)
-        await accha.edit("ᴘɪɴɢ ᴘᴏɴɢ ꜱᴛᴀʀᴛɪɴɢ..")
+        await accha.edit("Welcome...")
         await asyncio.sleep(0.2)
         await accha.delete()
-        umm = await m.reply_sticker(
-                  sticker = STKR,
-        )
+       
         await asyncio.sleep(0.3)
         await umm.delete()
         await m.reply_photo(
@@ -148,17 +118,17 @@ async def source(bot, m):
 @Mukesh.on_message(filters.command(["ping","alive"], prefixes=["","+", "/", "-", "?", "$", "&","."]))
 async def ping(client, message: Message):
         start = datetime.now()
-        t = "ριиgιиg..."
+        t = "pinging..."
         txxt = await message.reply(t)
         await asyncio.sleep(0.25)
-        await txxt.edit_text("ριиgιиg.....")
+        await txxt.edit_text("pinging.....")
         await asyncio.sleep(0.35)
         await txxt.delete()
         end = datetime.now()
         ms = (end-start).microseconds / 1000
         await message.reply_photo(
                              photo=START_IMG,
-                             caption=f"ʜᴇʏ ʙᴀʙʏ!!\n**[{BOT_NAME}](t.me/{BOT_USERNAME}) ɪꜱ ᴀʟɪᴠᴇ 🥀 ᴀɴᴅ ᴡᴏʀᴋɪɴɢ ꜰɪɴᴇ ᴡɪᴛʜ ᴘᴏɴɢ ᴏꜰ \n➥ `{ms}` ms\n\n**ᴍᴀᴅᴇ ᴡɪᴛʜ ❣️ ʙʏ || [ᴍᴜᴋᴇsʜ](https://t.me/itz_legend_coder)||",
+                             caption=f"Hello!\n[{BOT_NAME}](t.me/{BOT_USERNAME}) is alive and working with speed of \n- `{ms}` ms\n\n",
                              reply_markup=InlineKeyboardMarkup(PNG_BTN),
        )
 
@@ -172,7 +142,7 @@ async def chat(bot, message):
         await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
         if len(message.command) < 2:
             await message.reply_text(
-            "Example:**\n\n`/chatgpt Where is TajMahal?`")
+            "Example:**\n\n`/chatgpt What is AI?`")
         else:
 
             a = message.text.split(' ', 1)[1]
@@ -183,10 +153,10 @@ async def chat(bot, message):
 
             x=resp['choices'][0]["message"]["content"]
             end_time = time.time()
-            telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
-            await message.reply_text(f"{message.from_user.first_name} ᴀꜱᴋᴇᴅ:\n\n {a} \n\n {BOT_NAME} ᴀɴꜱᴡᴇʀᴇᴅ:-\n\n {x}\n\n✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ  {telegram_ping} \n\n🎉ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{BOT_USERNAME} ", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
+            telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " MS"
+            await message.reply_text(f"{message.from_user.first_name} ASKED:\n\n {a} \n\n {BOT_NAME} Answered:-\n\n {x}\n\nTime Taken {telegram_ping} \n\nPowered by @{BOT_USERNAME} ", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
     except Exception as e:
-        await message.reply_text(f"**ᴇʀʀᴏʀ:    {e} ")
+        await message.reply_text(f"**Error:    {e} ")
 
 
 s = bytearray.fromhex("68 74 74 70 73 3A 2F 2F 67 69 74 68 75 62 2E 63 6F 6D 2F 4E 6F 6F 62 2D 6D 75 6B 65 73 68 2F 43 68 61 74 67 70 74 2D 62 6F 74").decode()
@@ -214,13 +184,10 @@ if __name__ == "__main__":
         raise Exception("Your API_ID/API_HASH is not valid.")
     except AccessTokenInvalid:
         raise Exception("Your BOT_TOKEN is not valid.")
-    print(f"""JOIN  @MR_SUKKUN
+    print(f"""JOIN  @ChatGPT_TG4
 GIVE STAR TO THE REPO 
  {BOT_NAME} ɪs ᴀʟɪᴠᴇ!  
     """)
     idle()
     Mukesh.stop()
     print("Bot stopped. Bye !")
-#-----------CREDITS -----------
-# telegram : @itz_legend_coder
-# github : noob-mukesh
