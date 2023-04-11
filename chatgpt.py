@@ -40,7 +40,7 @@ SOURCE = xa
 UPDATE_CHNL = xxc
 DEVELOPER = axx
 SOURCE_TEXT = f"""
-Hello, This is [{BOT_NAME}. My source code is private but if you are interested to buy, contact @ArsanikContactBot!
+Hello, This is [{BOT_NAME}. My source code is private but if you are interested to buy, contact @ArsanikBolte!
 """
 
 
